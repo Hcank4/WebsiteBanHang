@@ -1,0 +1,14 @@
+@model Product
+<h2>Details</h2>
+<div>
+    <p><b>ID:</b> @Model.Id</p>
+    <p><b>Name:</b> @Model.Name</p>
+    <p><b>Price:</b> @Model.Price</p>
+    <p><b>Description:</b> @Model.Description</p>
+    <p><b>CategoryId:</b> @Model.CategoryId</p>
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <p><img src="@Model.ImageUrl" width="200" /></p>
+    }
+</div>
+<a asp-action="Index">Back</a>
